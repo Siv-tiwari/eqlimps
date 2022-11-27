@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link rel="stylesheet" href="./static/contacts_style.css">
+</head>
+<body>
+    
+    <nav class="navbar" id="sticky" >
+        <div class="logo">
+            <img src="assets/logo1.png" alt="logo">
+        </div>
+
+        <ul class="nav-list">
+            <li><a href="http://127.0.0.1/index">Home</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Services">Services</a></li>
+            <li><a href="#Contact">Contact Us</a></li>
+        </ul>
+
+        <div class="user">
+            <button id="user_button">
+                <img src="assets/user.png" alt="">
+            </button>
+        </div>
+    </nav>
+
+    <section class="contact_us_menu">
+        <img id="background" src="./assets/con_back.png" alt="">
+        <div class="design">
+            <div class="menu">
+                <hr id="up_line">
+                <h1>Contact US</h1>
+                <p>" Get in touch and let us know How we can help. Subscribe EQlimps to get all the latest updates and news. "</p>
+                <form action="/contacts" method="post" class="subscribe_form">
+                    <input type="text" name="users_name" id="users_name" placeholder="Name">
+                    <input type="text" name="users_email" id="user_email" placeholder="Email">
+                    <button class="button" id="signup">Send</button>
+                </form>
+                <hr id="down_line">
+            </div>
+            <img id="clipart" src="./assets/clipart.png" alt="clipart">
+        </div>
+
+        <button class="button" id="login">Log in</button>
+
+        <div class="phone_numbers">
+            <h3>Contact Numbers :</h3>
+            <h4>1234567890</h4>
+            <h4>4314678914</h4>
+            <h4>1034278901</h4>
+        </div>
+    </section>
+
+    <script src="./static/contact_control.js"></script>
+
+</body>
+</html>

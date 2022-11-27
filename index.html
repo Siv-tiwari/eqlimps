@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Modeling</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Scope+One&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   <!-- for star rating -->
+
+    <!-- style sheets -->
+    <link rel="stylesheet" href="./static/style.css">
+    <link rel="stylesheet" media="screen and (max-width: 1150px)" href="./static/responsive.css">    
+
+</head>
+
+<body>
+
+    <nav class="navbar" id="sticky" >
+        <div class="logo">
+            <img src="assets/logo1.png" alt="logo">
+        </div>
+
+        <ul class="nav-list">
+            <li><a href="http://127.0.0.1/index">Home</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Services">Services</a></li>
+            <li><a href="http://127.0.0.1/contacts">Contact Us</a></li>
+        </ul>
+
+        <div class="user">
+            <button id="user_button">
+                <img src="assets/user.png" alt="">
+            </button>
+        </div>
+    </nav>
+
+    <div id="scene"></div>      <!-- its child is our three.js scene -->
+
+    <div class="progress_bar-container">
+        <label for="progress-bar">Loading...</label>
+        <progress id="progress-bar" value="0" max="100"></progress>
+    </div>
+
+    <div id="overlay">
+        <h1>Best Free 3D Artwork's</h1>
+        <div class="search">
+            <input type="text" name="search" id="search" placeholder="Search...">
+            <img src="assets/search.png" alt="error">
+        </div>
+        <li id="trending_list">
+            <h3>Trending: </h3>
+            <a href="#">character</a>
+            <a href="#">electronic</a>
+            <a href="#">abstract</a>
+            <a href="#">music</a>
+        </li>   
+
+        <button id="interact_button">
+            <img id="interact_image" src="assets/interact.png" alt="error">
+        </button>
+        <h4 id="interact_heading">Click to Interact</h4>
+    </div>
+
+    <section class="cards">
+        <h1>Artist's View</h1>
+        <div id="cards_div">
+            <div class="box crossfd">
+                <img id="img1" src="assets/avatar1.png" alt="error">
+                <h3>John</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione, accusantium! Eligendi eos fugiat aspernatur dolores, nam perspiciatis deserunt ipsum officiis pariatur amet aperiam optio voluptates praesentium maxime suscipit dignissimos eveniet.</p>
+            </div>
+            <div class="box crossfd">
+                <img id="img2" src="assets/avatar2.png" alt="error">
+                <h3>Ruby</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione, accusantium! Eligendi eos fugiat aspernatur dolores, nam perspiciatis deserunt ipsum officiis pariatur amet aperiam optio voluptates praesentium maxime suscipit dignissimos eveniet.</p>
+            </div>
+            <div class="box crossfd">
+                <img id="img3" src="assets/avatar3.png" alt="error">
+                <h3>Chris</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione, accusantium! Eligendi eos fugiat aspernatur dolores, nam perspiciatis deserunt ipsum officiis pariatur amet aperiam optio voluptates praesentium maxime suscipit dignissimos eveniet.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="models_section">
+        <h1 id="heading_models">Art-Work</h1>
+        <div class="div_models">
+            <div class="modle_content">
+                    <img src="./assets/1.png" alt="modle1">
+                    <h1>Gun's and Bullet's</h1>
+                    <a class="artist_name" href="#">@Artist name</a>
+                    <p id="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore beatae quam adipisci tempora. Ab, ipsum.</p>
+                    <div class="modle_content_extended">      
+                        <p>software</p>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </div>
+                    <p class="interact">Interact &nbsp &#x2192</p>
+            </div>
+            <div class="modle_content">
+                    <img src="./assets/2.png" alt="modle2">
+                    <h1>Pear's Basket</h1>
+                    <a class="artist_name" href="#">@Artist name</a>
+                    <p id="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore beatae quam adipisci tempora. Ab, ipsum.</p>
+                    <div class="modle_content_extended">      
+                        <p>software</p>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </div>
+                    <p class="interact">Interact &nbsp &#x2192</p>
+            </div>
+            <div class="modle_content">
+                    <img src="./assets/bg3.jpg" alt="modle2">
+                    <h1>Builder</h1>
+                    <a class="artist_name" href="#">@Artist name</a>
+                    <p id="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore beatae quam adipisci tempora. Ab, ipsum.</p>
+                    <div class="modle_content_extended">      
+                        <p>software</p>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </div>
+                    <p class="interact">Interact &nbsp &#x2192</p>
+            </div>
+            <div class="modle_content">
+                    <img src="./assets/3.png" alt="modle2">
+                    <h1>Sword</h1>
+                    <a class="artist_name" href="#">@Artist name</a>
+                    <p id="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore beatae quam adipisci tempora. Ab, ipsum.</p>
+                    <div class="modle_content_extended">      
+                        <p>software</p>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </div>
+                    <p class="interact">Interact &nbsp &#x2192</p>
+            </div>
+            <div class="modle_content">
+                    <img src="./assets/4.png" alt="modle2">
+                    <h1>Stormbreaker</h1>
+                    <a class="artist_name" href="#">@Artist name</a>
+                    <p id="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore beatae quam adipisci tempora. Ab, ipsum.</p>
+                    <div class="modle_content_extended">      
+                        <p>software</p>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </div>
+                    <p class="interact">Interact &nbsp &#x2192</p>
+            </div>
+            <div class="modle_content">
+                    <img src="./assets/5.png" alt="modle2">
+                    <h1>Lamp</h1>
+                    <a class="artist_name" href="#">@Artist name</a>
+                    <p id="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore beatae quam adipisci tempora. Ab, ipsum.</p>
+                    <div class="modle_content_extended">      
+                        <p>software</p>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </div>
+                    <p class="interact">Interact &nbsp &#x2192</p>
+            </div>
+            <div class="modle_content">
+                    <img src="./assets/6.jpg" alt="modle2">
+                    <h1>Cube</h1>
+                    <a class="artist_name" href="#">@Artist name</a>
+                    <p id="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore beatae quam adipisci tempora. Ab, ipsum.</p>
+                    <div class="modle_content_extended">      
+                        <p>software</p>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </div>
+                    <p class="interact">Interact &nbsp &#x2192</p>
+            </div>
+            
+        </div>
+    </section>
+
+    <footer id="footer">
+            <div class="footer_div">
+                <div class="footer_content">
+                    <div id="community" class="footer_items">
+                        <h2>Community</h2>
+                        <li class="footer_list_items">
+                            <a href="">Explore</a>
+                            <a href="">Help Center</a>
+                            <a href="">Education</a>
+                            <a href="">Blog</a>
+                            <a href="">Forum</a>
+                            <a href="">Challenges</a>
+                            <a href="">Developers & API</a>
+                        </li>
+                    </div>
+        
+                    <div id="service" class="footer_items">
+                        <h2>Service</h2>
+                        <li class="footer_list_items">
+                            <a href="">Compare</a>
+                            <a href="">Download</a>
+                            <a href="">Feedback</a>
+                            <a href="">Bug Report</a>
+                        </li>
+                    </div>
+        
+                    <div id="activity" class="footer_items">
+                        <h2>Activity</h2>
+                        <li class="footer_list_items">
+                            <a href="">Influencers</a>
+                            <a href="">Affilate</a>
+                            <a href="">Honor</a>
+                            <a href="">Partners</a>
+                            <a href="">Giveaway</a>
+                        </li>
+                    </div>
+        
+                    <div class="subscription footer_items">
+                        <h2>EQlimps Subscription</h2>
+                        <div id="user_enter_email_for_subcription">
+                            <input type="text" name="subscribe" id="subscribe" placeholder="Subscribe to EQlimps">
+                            <button>Subscribe</button>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div id="socials">
+                    <hr>
+                    <div id="icons">
+                        <a href="https://www.facebook.com/" target="_blank"><img src="assets/facebook.png" alt="facebook"></a>
+                        <a href="https://www.instagram.com/" target="_blank"><img src="assets/instagram.png" alt="instagram"></a>
+                        <a href="https://twitter.com/" target="_blank"><img src="assets/twitter.png" alt="twitter"></a>
+                        <a href="https://www.youtube.com/" target="_blank"><img src="assets/youtube.png" alt="youtube"></a>
+                        <a href="https://www.linkedin.com/feed/?trk=IN-SEM_google-adwords_Jordan-brand-sign-up" target="_blank"><img src="assets/linkedin.png" alt="linkedin"></a>
+                        <a href="https://www.whatsapp.com/" target="_blank"><img src="assets/whatsapp.png" alt="whatsapp"></a>
+                    </div>
+                </div>
+
+                <div id="copyright">
+                    <h5>Copyright &copy; EQlimps All rights reserved!</h5>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./static/three.js"></script>
+    <script src="./static/script.js" type="module"></script>
+
+</body>
+
+</html>

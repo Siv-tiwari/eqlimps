@@ -1,0 +1,15 @@
+#user_enter_email_for_subcription{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.subscription h2{
+    margin: auto;
+    text-align: center;
+}
+
+/* #overlay{
+    width: 100%;
+    margin: auto;
+    background-color: red;
+} */
